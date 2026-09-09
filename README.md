@@ -70,20 +70,6 @@ src/
 Each component keeps its CSS next to it. Shared classes (`.container`, `.section`,
 `.card`, `.btn`, `.chip`, `.reveal`) live in `index.css`.
 
-## Deploying
-
-Import the repo at [vercel.com/new](https://vercel.com/new). Vercel picks up the Vite
-preset on its own, and `vercel.json` handles the rest. After that every push to `main`
-deploys automatically, and other branches get their own preview URLs.
-
-`vercel.json` does two things worth knowing about:
-
-- rewrites all paths to `index.html`, otherwise loading a URL like `/projects` directly
-  would 404
-- caches `/assets/*` for a year, which is safe because Vite puts a content hash in each
-  filename
-
-Update the `canonical` link in `index.html` if you deploy to a different domain.
 
 ## Contact form
 
