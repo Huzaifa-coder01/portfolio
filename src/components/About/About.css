@@ -1,31 +1,129 @@
-.about {
-  background: url('../assets/images/bg.avif') no-repeat center center/cover;
-  min-height: 100vh;
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.about-lead {
+  font-size: 1.08rem;
+  color: var(--text);
+}
+
+.about-body {
+  margin-top: 16px;
+  color: var(--text-muted);
+}
+
+.strengths {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 38px;
+}
+
+.strength {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
-  text-align: center;
-  color: #fff;
+  gap: 14px;
 }
 
-.content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+.strength-icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid rgba(79, 209, 197, 0.25);
 }
 
-.shadow-box {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  max-width: 800px;
-  margin: 0 auto;
+.strength h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
-.shadow-box p {
-  font-size: 1.1rem;
+.strength p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
   line-height: 1.6;
-  margin-bottom: 20px;
+}
+
+/* ---------- Side card ---------- */
+
+.facts-card {
+  padding: 28px 26px;
+  position: sticky;
+  top: calc(var(--header-h) + 24px);
+}
+
+.facts-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.lang-title {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+}
+
+.facts {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.facts li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--border);
+  font-size: 0.92rem;
+}
+
+.facts li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.fact-label {
+  color: var(--text-dim);
+  flex-shrink: 0;
+}
+
+.fact-value {
+  color: var(--text);
+  font-weight: 500;
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .facts-card {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .strengths {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 30px;
+  }
+  .facts-card {
+    padding: 24px 20px;
+  }
 }

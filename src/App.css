@@ -1,10 +1,26 @@
-body {
-  margin: 0;
-  padding: 0;
-  background: url('./assets/images/bg.avif') no-repeat center center fixed;
-  background-size: cover;
-  color: #333;
-}
 .App {
-  text-align: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 200;
+  padding: 12px 20px;
+  background: var(--accent);
+  color: #06120f;
+  border-radius: 0 0 var(--radius-sm) 0;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
 }

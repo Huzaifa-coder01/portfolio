@@ -1,0 +1,168 @@
+.timeline {
+  position: relative;
+  padding-left: 46px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--accent),
+    rgba(109, 140, 255, 0.5),
+    transparent
+  );
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 26px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -46px;
+  top: 24px;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-soft);
+  border: 1px solid var(--border-strong);
+  color: var(--text-dim);
+}
+
+.timeline-dot.current {
+  color: #06120f;
+  background: var(--gradient);
+  border-color: transparent;
+  box-shadow: 0 0 0 4px rgba(79, 209, 197, 0.14);
+}
+
+.job-card {
+  padding: 26px 28px;
+}
+
+.job-card:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-hover);
+}
+
+.job-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.job-role {
+  font-size: 1.18rem;
+  font-weight: 600;
+}
+
+.job-company {
+  margin-top: 3px;
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.job-period {
+  flex-shrink: 0;
+  padding: 5px 13px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-dim);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.job-period.current {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: rgba(79, 209, 197, 0.3);
+}
+
+.job-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.job-points li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.job-points li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.75;
+}
+
+.job-shipped {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.job-shipped span {
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+.job-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+@media (max-width: 600px) {
+  .timeline {
+    padding-left: 30px;
+  }
+  .timeline::before {
+    left: 8px;
+  }
+  .timeline-dot {
+    left: -30px;
+    top: 22px;
+    width: 18px;
+    height: 18px;
+  }
+  .timeline-dot svg {
+    display: none;
+  }
+  .job-card {
+    padding: 22px 20px;
+  }
+  .job-head {
+    gap: 10px;
+  }
+}
