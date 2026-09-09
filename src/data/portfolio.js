@@ -7,7 +7,7 @@ export const profile = {
   phoneHref: '+923160735200',
   email: 'huzaifanadeemtts@gmail.com',
   github: 'https://github.com/Huzaifa-coder01',
-  linkedin: 'https://www.linkedin.com/in/huzaifa-nadeem',
+  linkedin: 'https://www.linkedin.com/in/huzaifa-nadeem-b591272aa/',
   summary:
     'Software Engineer with hands-on experience in full-stack development, specializing in the MERN stack (MongoDB, Express.js, React.js, Node.js). Skilled in building responsive web applications, developing and integrating RESTful APIs, designing scalable database schemas, and implementing complex, role-based business logic.',
   summaryExtra:
