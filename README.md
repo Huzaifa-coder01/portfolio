@@ -1,6 +1,6 @@
 # Portfolio
 
-My personal portfolio site. Live at <https://portfolio-huzaifa-nadeem.vercel.app>
+My personal portfolio site. Live at <https://huzaifa-nadeem.vercel.app>
 
 Built with React and Vite. Plain CSS, no UI library, no state management. React and
 ReactDOM are the only runtime dependencies.
@@ -16,12 +16,12 @@ npm run dev
 
 Opens on http://localhost:5173.
 
-| Script | What it does |
-| --- | --- |
-| `npm run dev` | dev server with hot reload |
-| `npm run build` | production build into `dist/` |
+| Script            | What it does                   |
+| ----------------- | ------------------------------ |
+| `npm run dev`     | dev server with hot reload     |
+| `npm run build`   | production build into `dist/`  |
 | `npm run preview` | serve the built output locally |
-| `npm run lint` | eslint |
+| `npm run lint`    | eslint                         |
 
 ## Using it for your own portfolio
 
@@ -69,7 +69,6 @@ src/
 
 Each component keeps its CSS next to it. Shared classes (`.container`, `.section`,
 `.card`, `.btn`, `.chip`, `.reveal`) live in `index.css`.
-
 
 ## Contact form
 
